@@ -1,0 +1,174 @@
+.heart_beat{
+    /*position:absolute;*/
+    /*left: 50%;*/
+    /*top:50%;*/
+    /*margin-left: -150px;*/
+    /*margin-top: -135px;*/
+
+    position: fixed;
+    top: 70px;
+    right: 25px;
+
+
+    width: 30px;
+    height:27px;
+    background: transparent;
+    /*box-shadow: 2px 2px 5px #000;*/
+    filter:drop-shadow(0px 0px 20px rgb(255,20,20));//阴影实现:filter: drop-shadow(x偏移, y偏移, 模糊大小, 色值);
+}
+.heart_beating{
+    animation: beat 1s linear infinite;
+}
+
+.heart_beat:before,
+.heart_beat:after{
+    content: "";
+    position: absolute;
+    left: 19px;
+    width: 20px;
+    height: 30px;
+    background: rgb(255,0,0);
+    border-radius: 150px 150px 0 0;
+    transform:rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart_beat:after{
+    left: 0;
+    transform:rotate(45deg);
+    transform-origin: 100% 100%;
+}
+@keyframes beat{
+    0%{
+        transform: scale(0.6,0.6);
+        opacity: 1;
+    }
+    25%{
+        transform: scale(1,1);
+        opacity: 0.8;
+    }
+    100%{
+        transform: scale(0.6,0.6);
+        opacity: 1;
+    }
+}
+
+.heart_count
+{
+    position: fixed;
+    top: 90px;
+    right: 0px;
+    width: 70px;
+    color: white;
+    text-align: center;
+    font-size: 14px ;
+}
+
+.heart_btn
+{
+    /*border-style: none;*/
+    height:45px;
+    border-radius: 15px;
+    color:white;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 45px;
+    background:linear-gradient(to bottom,#CD853F,#DB7093);
+    display: flex;
+    flex-direction: row;
+
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+    -moz-box-shadow: 2px 2px 10px #909090;
+    -webkit-box-shadow: 2px 2px 10px #909090;
+    box-shadow:2px 2px 10px #909090
+
+}
+
+.btn_box
+{
+    position: fixed;
+    bottom: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart_btn:hover
+{
+    /*background:linear-gradient(to bottom,#CD853F,#000000);*/
+    background-color:yellow;
+}
+
+
+/*******跳动的心icon开始*****/
+
+.heart_beat_icon{
+    margin-top:10px;
+    width: 30px;
+    height:27px;
+    background: transparent;
+    filter:drop-shadow(0px 0px 20px rgb(255,20,20));//阴影实现:filter: drop-shadow(x偏移, y偏移, 模糊大小, 色值);
+    animation: beat_icon 1s linear infinite;
+}
+.heart_beat_icon:before,
+.heart_beat_icon:after{
+    content: "";
+    position: absolute;
+    left: 19px;
+    width: 20px;
+    height: 30px;
+    background: rgb(255,0,0);
+    border-radius: 150px 150px 0 0;
+    transform:rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart_beat_icon:after{
+    left: 0;
+    transform:rotate(45deg);
+    transform-origin: 100% 100%;
+}
+@keyframes beat_icon{
+    0%{
+        transform: scale(0.6,0.6);
+        opacity: 1;
+    }
+    25%{
+        transform: scale(1,1);
+        opacity: 0.8;
+    }
+    100%{
+        transform: scale(0.6,0.6);
+        opacity: 1;
+    }
+}
+/*******跳动的心icon结束*****/
+
+/*******源码托管地址*****/
+.link
+{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+}
+
+a
+{
+    color: white;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 2px;
+}
+.git
+{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right:3px ;
+}
+/*******结束link*****/
